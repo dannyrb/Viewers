@@ -10,14 +10,28 @@ allows our code to be used in more ways, it also increases complexity. Below, we
 aim to demistify that complexity by providing insight into how our Viewer is
 architected, and the role each of it's dependent libraries plays.
 
-- [Overview](#overview)
+- [Overview: Core Concepts](#overview--core-concepts)
+  - [Project Organization](#project-organization)
+  - [Build Time](#build-time)
+  - [Run Time](#run-time)
 - [Business Logic](#business-logic)
 - [Component Library](#react-component-library)
 - [Internationalization](#internationalization-i18n)
 - [Extensions & Configuration](#extensions--configuration)
 - [Common Questions](#common-questions)
 
-## Overview
+## Overview: Core Concepts
+
+There are a lot of moving parts to the [OHIF Platform][viewers-project]; it's
+important to know how those parts are defined and fit together.
+
+- Core Platform
+- Extensions
+- Configuration
+- Modes
+- "Our" Viewer
+
+### Project Organization
 
 The [OHIF Medical Image Viewing Platform][viewers-project] is maintained as a
 [`monorepo`][monorepo]. This means that this repository, instead of containing a
@@ -54,7 +68,15 @@ The `extensions` directory contains many packages that can be registered with
 `@ohif/core`'s `ExtensionManager` to expand an application's supported features
 and functionality.
 
-![Architecture Diagram](../assets/img/architecture-diagram.png)
+#### Build Time
+
+...
+
+![Architecture: Build Time Diagram](../assets/img/architecture-build-time.png)
+
+#### Run Time
+
+...
 
 <center><i>architecture diagram</i></center>
 
